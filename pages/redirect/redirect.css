@@ -1,0 +1,33 @@
+@import "../../shared.css";
+
+html,
+body {
+    height: 100%;
+}
+
+.redirect-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 300px;
+    height: 100%;
+    margin: auto;
+
+    .loader {
+        width: fit-content;
+        font-size: 30px;
+        padding-bottom: 8px;
+        background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+        animation: animationEffect 2s linear infinite;
+    }
+
+    .loader:before {
+        content: "Redirecting..."
+    }
+}
+
+@keyframes animationEffect {
+    to {
+        background-size: 100% 3px
+    }
+}

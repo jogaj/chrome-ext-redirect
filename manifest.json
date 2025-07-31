@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "IP Redirect New Tab",
+    "version": "1.0",
+    "description": "Redirects new tab to a URL if IP matches, using chrome",
+    "permissions": [
+        "storage",
+        "webRequest"
+    ],
+    "host_permissions": [
+        "http://ip-api.com/*"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "pages/redirect/redirect.html"
+    },
+    "action": {
+        "default_popup": "pages/options/options.html",
+        "default_title": "Extension Options"
+    },
+    "icons": {
+        "16": "images/icons8-shuffle-16.png",
+        "32": "images/icons8-shuffle-32.png",
+        "64": "images/icons8-shuffle-64.png",
+        "128": "images/icons8-shuffle-128.png"
+    }
+}

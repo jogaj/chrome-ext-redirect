@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IP Redirect Options</title>
+    <link rel="stylesheet" href="options.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class="options-container">
+        <div class="options-container-item-title">
+            <img alt="logo" src="../../images/icons8-shuffle-32.png">
+            <h2>IP Redirect Options</h2>
+        </div>
+        <form name="form">
+            <div class="options-container-item">
+                <label for="ipToMatch">IP Address to match *</label>
+                <input class="input" type="text" id="ipToMatch" placeholder="e.g., 192.168.1.1"
+                    pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
+                    required />
+            </div>
+            <div class="options-container-item">
+                <label for="redirectUrl">Redirect URL *</label>
+                <input class="input" type="url" id="redirectUrl" placeholder="https://example.com/your-url-here"
+                    required />
+            </div>
+            <button type="submit" class="input button" id="saveBtn">Save</button>
+        </form>
+
+        <div id="statusContainer" class="hidden">
+            <p id="status"><span id="message"></span><span id="icon"></span></p>
+        </div>
+
+    </div>
+    <script src="../redirect/redirect.js" type="module"></script>
+    <script src="options.js" type="module"></script>
+</body>
+
+</html>
