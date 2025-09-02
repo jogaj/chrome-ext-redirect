@@ -88,10 +88,18 @@
         margin-bottom: 1rem;
     }
 
+    .options-container-item-row,
     .options-container-item {
-        flex-direction: column;
         gap: 0.5em;
         margin-bottom: 1em;
+    }
+
+    .options-container-item {
+        flex-direction: column;
+    }
+
+    .options-container-item-row {
+        flex-direction: row;
     }
 
     label {

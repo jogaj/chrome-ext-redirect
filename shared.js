@@ -6,3 +6,4 @@ export const STATUS_MESSAGE = 'message';
 export const STATUS_CONTAINER = 'statusContainer';
 export const FORM = 'form';
 export const SAVE_BTN = 'saveBtn'; 
+export const CHK_ONE_INSTANCE = 'oneInstance';
