@@ -6,13 +6,16 @@
     "permissions": [
         "storage",
         "webRequest",
-        "tabs"
+        "tabs",
+        "activeTab"
     ],
     "host_permissions": [
         "http://ip-api.com/*"
     ],
-    "chrome_url_overrides": {
-        "newtab": "pages/redirect/redirect.html"
+    "incognito": "split",
+    "background": {
+        "service_worker": "incognito-background.js",
+        "type": "module" 
     },
     "action": {
         "default_popup": "pages/options/options.html",
