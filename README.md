@@ -8,7 +8,7 @@ A simple Chrome extension that redirects you to a specified URL if your public I
 -   **Simple Configuration**: An easy-to-use options page to set the IP to match and the destination URL.
 -   **First-Time Setup**: Automatically prompts you to configure the extension if settings are not found.
 -   **Loop Prevention**: Uses session storage to prevent multiple redirects within the same browser session.
--   **Allow only one instance** You can configure the extension to allow only one instance of the pre-configured URL.
+-   **Allow only one instance**: You can configure the extension to allow only one instance of the pre-configured URL.
 
 ## How It Works
 
@@ -52,16 +52,19 @@ chrome-ext-redirect/
 │   ├── options/
 │   │   ├── options.html
 │   │   ├── options.css
-│   │   └── options.js   # Logic for the settings page
+│   │   └── options.js      # Logic for the settings page
 │   └── redirect/
-│       ├── redirect.css # Styles for a "Redirecting..." message
-│       └── redirect.js  # Content script for checking IP and redirecting
-├── shared.css           # Shared styles
-├── shared.js            # Shared constants
-└── manifest.json        # Extension manifest file
+│       ├── redirect.css    # Styles for a "Redirecting..." message
+│       └── redirect.js     # Content script for checking IP and redirecting
+├── shared.css              # Shared styles
+├── shared.js               # Shared constants
+├── incognito-background.js # Content script that handles opening new tabs 
+└── manifest.json           # Extension manifest file   
+
 ```
 
 -   **`manifest.json`**: Defines the extension's properties, permissions (`storage`), options page, and content scripts.
 -   **`pages/options/`**: Contains the files for the user-facing settings page.
 -   **`pages/redirect/redirect.js`**: The core logic. This content script runs on web pages, checks the user's IP, and performs the redirect if necessary.
--   **`shared.js`**: Contains constants used across different parts of the extension to avoid magic strings.
+-   **`shared.js`**: Contains constants used across different parts of the extension to avoid magic strings.  
+-   **`incognito-background.js`**: A background script that handles opening new tabs in incognito mode.
